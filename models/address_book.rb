@@ -30,6 +30,12 @@ require_relative 'entry'
 
    end
 
+
+   def delete_all_entries
+     @entries = []
+   end
+
+
    def binary_search(name)
      lower = 0
      upper = @entries.length - 1

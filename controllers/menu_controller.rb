@@ -15,7 +15,8 @@ require_relative '../models/address_book'
      puts "3 - Search for an entry"
      puts "4 - Import entries from a CSV"
      puts "5 - View entry by number"
-     puts "6 - Exit"
+     puts "6 - Delete Entire Address Book"
+     puts "7 - Exit"
      print "Enter your selection: "
 
  # #3
@@ -49,6 +50,12 @@ require_relative '../models/address_book'
       main_menu
 
     when 6
+      system "clear"
+      @address_book.delete_all_entries
+      puts "You have just destroyed the entire address book! I hope that was intentional!"
+      main_menu
+
+    when 7
       puts "Good-bye!"
 
       exit(0)
@@ -159,6 +166,8 @@ require_relative '../models/address_book'
 
      end
 
+     end
+
 
      def delete_entry(entry)
        @address_book.entries.delete(entry)
@@ -213,5 +222,4 @@ require_relative '../models/address_book'
     puts "#{selection} is not a valid input"
     entries_submenu(entry)
   end
-end
 end
