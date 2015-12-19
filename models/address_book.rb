@@ -31,15 +31,15 @@ require_relative 'entry'
    end
 
    def iterative_search(name)
-    #Ada, add stuff here....
-    @entries.each do |entry|
+   #Ada, add stuff here....
+   @entries.each do |entry|
 
-      if entry.name == name
-        return entry
-      end
-    end
+     if entry.name == name
+       return entry
+     end
+   end
 
-        return nil
+       return nil
 end
 
 
