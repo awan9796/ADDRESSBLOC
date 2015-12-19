@@ -30,6 +30,19 @@ require_relative 'entry'
 
    end
 
+   def iterative_search(name)
+    #Ada, add stuff here....
+    @entries.each do |entry|
+
+      if entry.name == name
+        return entry
+      end
+    end
+
+        return nil
+end
+
+
    def binary_search(name)
      lower = 0
      upper = @entries.length - 1
@@ -46,8 +59,7 @@ require_relative 'entry'
        elsif name > mid_name
          lower = mid + 1
        end
+     end
 
    end
- end
-
  end
